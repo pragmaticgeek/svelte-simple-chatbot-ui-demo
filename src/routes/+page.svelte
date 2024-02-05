@@ -29,8 +29,9 @@
 			id: '2',
 			userInfo: botUser,
 			role: MessageRole.ASSISTANT,
-			message: 'You can find the source to this demo at <url>.  Please try submitting messages below to see the chat bot interaction.'
-		},
+			message:
+				'You can find the source to this demo at https://github.com/pragmaticgeek/svelte-simple-chatbot-ui-demo.  Please try submitting messages below to see the chat bot interaction.'
+		}
 	];
 
 	const handleSubmit = (value: string) => {
@@ -63,7 +64,12 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
 <div class="h-full mx-auto flex justify-center items-center">
-	<Chatbot {conversations} {isQuerying} onSubmit={handleSubmit} placeholder={'Type to chat to try demo...'}>
+	<Chatbot
+		{conversations}
+		{isQuerying}
+		onSubmit={handleSubmit}
+		placeholder={'Type to chat to try demo...'}
+	>
 		<ReplySolid slot="customIcon" />
 	</Chatbot>
 </div>
